@@ -21,10 +21,10 @@ class PacketTunnelProvider: NEPacketTunnelProvider, TunnelDelegate, ClientTunnel
 	var tunnelConnection: ClientTunnelConnection?
 
 	/// The completion handler to call when the tunnel is fully established.
-	var pendingStartCompletion: (NSError? -> Void)?
+    var pendingStartCompletion: ((NSError?) -> Void)?
 
 	/// The completion handler to call when the tunnel is fully disconnected.
-	var pendingStopCompletion: (Void -> Void)?
+    var pendingStopCompletion: (() -> Void)?
 
 	// MARK: NEPacketTunnelProvider
 
